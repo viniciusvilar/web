@@ -59,7 +59,7 @@ public class Livros extends HttpServlet {
 		livros.add(livro3);
 		
 		request.setAttribute("livros", livros);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("mostrarLivro.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarLivro.jsp");
 		dispatcher.forward(request, response);
 	}
 

@@ -30,8 +30,7 @@
 	
 	<div>
 		<c:forEach items="${livros}" var="livro">
-			<ol><li>${livro.id}</li></ol>
-			<ol><li>${livro.name}</li></ol>
+			<p>ID: ${livro.id} Título: ${livro.name}</p>
 		</c:forEach>
 	</div>
 </body>

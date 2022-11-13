@@ -12,8 +12,7 @@
 	<table>
 		<tr>
 			<c:forEach items="${livros}" var="livro">
-				<td>${livro.id}</td>
-				<td>${livro.name}</td>
+				<td>${livro}</td>
 			</c:forEach>
 		</tr>
 	</table>
