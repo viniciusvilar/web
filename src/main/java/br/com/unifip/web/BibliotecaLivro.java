@@ -1,19 +1,10 @@
 package br.com.unifip.web;
 
-import java.util.ArrayList;
 
 public class BibliotecaLivro {
 	private int id;
 	private String name;
-	public ArrayList<BibliotecaLivro> Livros = new ArrayList<>();
 
-	
-	public ArrayList<BibliotecaLivro> getLivros() {
-		return Livros;
-	}
-	public void setLivros(ArrayList<BibliotecaLivro> livros) {
-		Livros = livros;
-	}
 	public int getId() {
 		return id;
 	}

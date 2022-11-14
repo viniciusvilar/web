@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 250px;
+    background-color: #26333d;
+    color: white;
+    line-height: 250px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+nav {
+    background-color: #077979;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+div.generic {
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.default-div {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#formDiv > h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+
+input {
+    width: 250px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 4px;
+    height: 20px;
+}
+
+input#idSend {
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 7px;
+    width: 100%;
+    height: 40px;  
+}
+
+table {
+    border: 1px black solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table > thead > tr > td {
+    border: 1px black solid;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+}
+
+table > tbody > tr > td {
+    border: 1px black solid;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
