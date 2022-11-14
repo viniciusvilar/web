@@ -14,12 +14,12 @@
         <h1>Biblioteca Virtual</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.jsp">Home</a>
         <a href="cadastrarLivro.jsp">Cadastrar Livro</a>
-        <a href="mostrarLivro.jsp">Livros Cadastrados</a>
+        <a href="http://localhost:8080/web/livros">Livros Cadastrados</a>
     </nav>
     <section>
-        
+
     </section>
 </body>
 </html>

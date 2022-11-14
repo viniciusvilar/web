@@ -17,16 +17,16 @@
         <h1>Biblioteca Virtual</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.jsp">Home</a>
         <a href="cadastrarLivro.jsp">Cadastrar Livro</a>
-        <a href="mostrarLivro.jsp">Livros Cadastrados</a>
+        <a href="http://localhost:8080/web/livros">Livros Cadastrados</a>
     </nav>
     <section>
         <div class="generic">
             <h1>Cadastre um livro</h1>
         </div>
         <div class="default-div">
-            <form action="livros" method="post">
+            <form>
                 <div>
                     <label for="idCode">ID Livro</label>
                     <input type="number" id="idCode" name="nameCode" placeholder="Insira o Código"/>
@@ -40,14 +40,6 @@
                 </div>
             </form>
         </div>
-        
-        	<br />
-	
-		<div>
-			<c:forEach items="${livros}" var="livro">
-				<p>ID: ${livro.id} Título: ${livro.name}</p>
-			</c:forEach>
-		</div>
     </section>
 </body>
 </html>

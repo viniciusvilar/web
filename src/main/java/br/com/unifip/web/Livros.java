@@ -31,14 +31,6 @@ public class Livros extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		List<BibliotecaLivro> livros = new ArrayList<BibliotecaLivro>();
 		
 		BibliotecaLivro livro1 = new BibliotecaLivro();
@@ -50,17 +42,29 @@ public class Livros extends HttpServlet {
 		livro2.setId(02);
 		livro2.setName("Harry Potter e a Câmara Secreta");
 		livros.add(livro2);
-
+		
 		BibliotecaLivro livro3 = new BibliotecaLivro();
-		String idParam = request.getParameter("nameCode");
-		String nameParam = request.getParameter("nameName");
-		livro3.setId(Integer.parseInt(idParam));
-		livro3.setName(nameParam);
+		livro3.setId(03);
+		livro3.setName("Harry Potter e o Prisioneiro de Azkaban");
 		livros.add(livro3);
+
 		
 		request.setAttribute("livros", livros);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarLivro.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("mostrarLivro.jsp");
 		dispatcher.forward(request, response);
 	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+	
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
 
 }

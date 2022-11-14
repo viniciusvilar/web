@@ -17,15 +17,15 @@
         <h1>Biblioteca Virtual</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.jsp">Home</a>
         <a href="cadastrarLivro.jsp">Cadastrar Livro</a>
-        <a href="mostrarLivro.jsp">Livros Cadastrados</a>
+        <a href="http://localhost:8080/web/livros">Livros Cadastrados</a>
     </nav>
-    <section id="showBooks">
+    <section>
         <div class="generic">
             <h1>Livros Cadastrados</h1>
         </div>
-        <div class="default-div">
+        <div class="default-div tableBooks">
             <table>
                 <thead>
                     <tr>
@@ -34,18 +34,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Harry Potter e a Pedra Filosofal</td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Harry Potter e a Câmara Secreta</td>
-                    </tr>
-                    <tr>
-                        <td>003</td>
-                        <td>Harry Potter e o Prisioneiro de Azkaban</td>
-                    </tr>
+                    
+                    	<c:forEach items="${livros}" var="livro">
+                    		<tr>
+		                        <td>${livro.id}</td>
+		                        <td>${livro.name}</td>
+	                        </tr>
+                        </c:forEach>
+                    
                 </tbody>
             </table>
         </div>
