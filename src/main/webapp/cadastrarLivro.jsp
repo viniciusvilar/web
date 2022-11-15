@@ -26,10 +26,10 @@
             <h1>Cadastre um livro</h1>
         </div>
         <div class="default-div">
-            <form>
+            <form action="livros" method="post">
                 <div>
                     <label for="idCode">ID Livro</label>
-                    <input type="number" id="idCode" name="nameCode" placeholder="Insira o Código"/>
+                    <input type="number" id="idCode" name="nameCode" placeholder="Insira o ID"/>
                 </div>
                 <div>
                     <label for="idName">Nome do Livro</label>

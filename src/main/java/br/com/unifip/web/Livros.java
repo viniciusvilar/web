@@ -21,6 +21,7 @@ public class Livros extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
+	private List<BibliotecaLivro> livros = new ArrayList<BibliotecaLivro>();
     public Livros() {
         super();
         // TODO Auto-generated constructor stub
@@ -31,33 +32,26 @@ public class Livros extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		List<BibliotecaLivro> livros = new ArrayList<BibliotecaLivro>();
-		
-		BibliotecaLivro livro1 = new BibliotecaLivro();
-		livro1.setId(01);
-		livro1.setName("Harry Potter e a Pedra Filosofal");
-		livros.add(livro1);
-		
-		BibliotecaLivro livro2 = new BibliotecaLivro();
-		livro2.setId(02);
-		livro2.setName("Harry Potter e a Câmara Secreta");
-		livros.add(livro2);
-		
-		BibliotecaLivro livro3 = new BibliotecaLivro();
-		livro3.setId(03);
-		livro3.setName("Harry Potter e o Prisioneiro de Azkaban");
-		livros.add(livro3);
-
-		
 		request.setAttribute("livros", livros);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("mostrarLivro.jsp");
 		dispatcher.forward(request, response);
+		//doGet(request, response);
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		BibliotecaLivro livro3 = new BibliotecaLivro();
+		String idParam = request.getParameter("nameCode");
+		String nameParam = request.getParameter("nameName");
+		livro3.setId(Integer.parseInt(idParam));
+		livro3.setName(nameParam);
+		livros.add(livro3);
+
+		request.setAttribute("livros", livros);
 		doGet(request, response);
 	}
 	
